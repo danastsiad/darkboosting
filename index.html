@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <ul class="nav-menu">
+                <div class="right-menu">
+                    <li class="logo"><a href="#"><img src="img/logo-dark-boosting.png" alt=""></a></li>
+                    <li><a href=""><img src="img/burger.png" alt=""></a></li>
+                    <li><a href="#">ИГРЫ</a></li>
+                    <li class="">
+                        <div class="tk"><a href="">ТРОФЕЙНАЯ КОМНАТА</a></div>
+                    </li>
+                </div>
+                <div class="lev-menu">
+                    <li><a href="#"><img src="img/gift.png" alt=""></a></li>
+                    <li><a href="#">ПОДАРОК</a></li>
+                    <li><a href="#"><img src="img/coin-b.png" alt=""></a></li>
+                    <li><a href="#">МОНЕТЫ</a></li>
+                    <li><a href="#"><img src="img/purse.png" alt=""></a></li>
+                    <li><a href="#">КОШЕЛЕК</a></li>
+                    <li class="log"><a href="#" class="modal-toggle">ВОЙТИ</a></li>
+                    <select name="language">
+                        <option value="rus">Рус</option>
+                        <option value="eng">Англ</option>
+                    </select>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="modal">
+        <div class="modal-overlay modal-toggle"></div>
+        <div class="modal-wrapper modal-transition">
+            <div class="tabs">
+                <input type="radio" name="tab-btn" id="tab-btn-1" value="" checked>
+                <label for="tab-btn-1">ВХОД</label>
+                <input type="radio" name="tab-btn" id="tab-btn-2" value="">
+                <label for="tab-btn-2">РЕГИСТРАЦИЯ</label>
+                <div id="content-1">
+                    <div>
+                        <fieldset>
+                            <legend>Логин</legend>
+                            <input type="text" class="login" placeholder="Введи логин">
+                        </fieldset>
+                        <fieldset>
+                            <legend>Пароль</legend>
+                            <input type="text" class="password" placeholder="Введи пароль" id="password">
+                        </fieldset>
+                        <a href="#" class="password-control" onclick="return show_hide_password(this);"></a>
+
+                        <button href="#" id="button-pop">ВОЙТИ</button><br>
+                        <a href="#" class="pomn">Не помнишь пароль?</a>
+                        <div class="ili">
+                            <img src="img/ornm.png" alt="">
+                            <p>ИЛИ ВОЙТИ ЧЕРЕЗ</p>
+                            <img src="img/ornm.png" alt="">
+                        </div>
+                        <div class="social">
+                            <button href="#"><img src="img/google.png" alt="">GOOGLE</button>
+                            <button href="#"><img src="img/facebook.png" alt="">FACEBOOK</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content-2">
+                    <div>
+                        <div>
+                            <fieldset>
+                                <legend>Логин*</legend>
+                                <input type="text" class="login" placeholder="Введи логин">
+                            </fieldset>
+                            <fieldset>
+                                <legend>Skype</legend>
+                                <input type="text" class="skype" placeholder="Логин в скайпе">
+                            </fieldset>
+                        </div>
+                        <fieldset>
+                            <legend>Email*</legend>
+                            <input type="email" class="email" placeholder="Введи адрес эл. почты">
+                        </fieldset>
+                        <div>
+                            <fieldset>
+                                <legend>Пароль*</legend>
+                                <input type="text" class="password" placeholder="Введи пароль" id="password">
+                            </fieldset>
+                            <fieldset>
+                                <legend>Подтверждение пароля*</legend>
+                                <input type="text" class="password" placeholder="Повтори пароль" id="password">
+                            </fieldset>
+                        </div>
+                        <fieldset>
+                            <legend>Страна</legend>
+                            <select name="strana" id="pet-select" class="strana">
+                                <option value="none">Украина</option>
+                                <option value="rus">Россия</option>
+                            </select>
+                        </fieldset>
+                        <a href="#" class="password-control" id="password-control-2"
+                            onclick="return show_hide_password(this);"></a>
+                        <a href="#" class="password-control" id="password-control-2"
+                            onclick="return show_hide_password(this);"></a>
+                        <button href="#" id="button-pop">ЗАРЕГИСТРИРОВАТЬСЯ</button><br>
+                        <div class="ili">
+                            <img src="img/ornm.png" alt="">
+                            <p>ИЛИ АВТОРИЗОВАТЬСЯ ЧЕРЕЗ</p>
+                            <img src="img/ornm.png" alt="">
+                        </div>
+                        <div class="social">
+                            <button href="#"><img src="img/google.png" alt="">GOOGLE</button>
+                            <button href="#"><img src="img/facebook.png" alt="">FACEBOOK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="voron">
+                <div class="voron-left">
+                    <h1>Как получить <span class="orange">кайф</span> от игры, если в твоей команде раки?</h1>
+                    <p>Закажи у нас буст и поднимись на свой реальный рейтинг</p>
+                    <button class="button-tr"><a href="#">ЗАКАЗАТЬ БУСТ</a></button>
+                </div>
+                <div class="voron-right">
+                    <h2>Сделай первый заказ <br> и получи дополнительно</h2>
+                    <div>
+                        <div>
+                            <img src="img/coin.png" alt="">
+                            <p>50 монет</p>
+                        </div>
+                        <div>
+                            <img src="img/achieve.png" alt="">
+                            <p>ачивку</p>
+                        </div>
+                        <div>
+                            <img src="img/rating.png" alt="">
+                            <p>+10 EX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="two">
+        <div class="container">
+            <div class="dost">
+                <div>
+                    <img src="img/discount.png" alt="">
+                    <h2>Уникальная система поощрений</h2>
+                    <p>Регистрируйся на сайте, делай заказы, выполняй задания и получай даркмонети, скидки, ачивки.
+                        Продвигайся по уровню и получай дополнительные награды.
+                    </p>
+                </div>
+                <div>
+                    <img src="img/protect.png" alt="">
+                    <h2>впн протекция на каждый заказ</h2>
+                    <p>Система впн скрывает IP бустера, что делает буст необноружимым.
+                    </p>
+                </div>
+                <div>
+                    <img src="img/offline.png" alt="">
+                    <h2>Конфиденциальность и офлайн режим</h2>
+                    <p>Все услуги на нашем сайте конфиденциальны, также во всех играх, бустер играет только в офлайн
+                        режиме, скрывая факт нахождения его от друзей.</p>
+                </div>
+                <div>
+                    <img src="img/time-warranty.png" alt="">
+                    <h2>Гарантия времени</h2>
+                    <p>Каждый заказ сдается точно в срок, или мы вернем вам деньги.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="three">
+        <div class="container">
+            <div class="otzv">
+                <h1>Нам важна наша репутация! Читай отзывы на:</h1>
+                <div>
+                    <button class="button-wh"><a href=""><img src="img/speech-cloud.png" alt="">ФОРУМАХ</a></button>
+                    <button class="button-wh"><a href=""><img src="img/like.png" alt="">СЕРВИСЕ ОТЗЫВОВ</a></button>
+                    <button class="button-wh"><a href=""><img src="img/logo-d.png" alt="">НАШЕМ САЙТЕ</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="four">
+        <div class="container">
+            <div class="lk">
+                <div class="lk1">
+                    <h1>Мы разработали удобный личный кабинет</h1>
+                    <p>Равным образом дальнейшее развитие различных форм
+                        деятельности обеспечивает широкому кругу (специалистов)
+                        участие в формировании существенных финансовых и
+                        административных условий. Задача организации, в
+                        особенности же сложившаяся структура организации влечет
+                        за собой процесс внедрения и модернизации существенных
+                        финансовых и административных условий.
+                    </p>
+                    <div class="but">
+                        <button class="button-or"><a href="#">ТЕСТИРОВАТЬ ДЕМО</a></button>
+                        <button class="button-ortr"><a href=""><img src="img/play.png" alt="">СМОТРЕТЬ
+                                ВИДЕО</a></button>
+                    </div>
+                </div>
+                <div class="lk2">
+                </div>
+                <div class="lk3">
+                </div>
+                <div class="lk1 lk1_4">
+                    <h1>Гибкий калькулятор <br> поможет точно расчитать цену за пару кликов</h1>
+                    <p>Равным образом дальнейшее развитие различных форм
+                        деятельности обеспечивает широкому кругу (специалистов)
+                        участие в формировании существенных финансовых и
+                        административных условий. Задача организации, в
+                        особенности же сложившаяся структура организации влечет
+                        за собой процесс внедрения и модернизации существенных
+                        финансовых и административных условий.
+                    </p>
+                    <div class="but">
+                        <button class="button-or"><a href="#">ПОПРОБОВАТЬ</a></button>
+                        <button class="button-ortr"><a href=""><img src="img/play.png" alt="">СМОТРЕТЬ
+                                ВИДЕО</a></button>
+                    </div>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+
+            </div>
+        </div>
+    </section>
+    <section class="five">
+        <div class="container">
+            <div class="garant">
+                <h1>Получи гарантированную награду</h1>
+                <p>Мы заботимся про наших клиентов, поэтому заказывая буст у нас, ты можешь получить различные
+                    награды</p>
+                <div class="garant-content">
+                    <div>
+                        <img src="img/information.png" alt="">
+                        <img src="img/coin-w.png" alt="">
+                        <h2>темные монеты</h2>
+                    </div>
+                    <div>
+                        <img src="img/information.png" alt="">
+                        <img src="img/rating-w.png" alt="">
+                        <h2>+баллы в EX</h2>
+                    </div>
+                    <div>
+                        <img src="img/information.png" alt="">
+                        <img src="img/achieve-w.png" alt="">
+                        <h2>ачивки</h2>
+                    </div>
+                    <div>
+                        <img src="img/information.png" alt="">
+                        <img src="img/rank-w.png" alt="">
+                        <h2>ранги</h2>
+                    </div>
+                    <div>
+                        <img src="img/information.png" alt="">
+                        <img src="img/purse-w.png" alt="">
+                        <h2>расширение кошелька</h2>
+                    </div>
+                    <div>
+                        <img src="img/information.png" alt="">
+                        <img src="img/cashback-w.png" alt="">
+                        <h2>+% к кешбеку</h2>
+                    </div>
+                    <div>
+                        <img src="img/information.png" alt="">
+                        <img src="img/discount-w.png" alt="">
+                        <h2>+скидка <br>g на заказ</h2>
+                    </div>
+                </div>
+                <button class="button-tr"><a href="#">ЗАКАЗАТЬ БУСТ</a></button>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="six">
+        <div class="container">
+            <h1>Как это работает?</h1>
+            <div class="item">
+                <div class="slid_numb">
+                    <img src="img/s1.png" alt="">
+                    <div class="gayd__element">
+                        <a href="">Посмотреть подробнее</a>
+                    </div>
+                </div>
+                <div class="slider slider_one">
+                    <div class="slider_content">
+                        <h2>1 ЭТАП</h2>
+                        <p>В первую очередь выбери свою игру <br>
+                            и услугу, которая тебе подходит.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="display: none">
+                <div class="slid_numb">
+                    <img src="img/s22.png" alt="">
+                    <div class="gayd__element">
+                        <a href="">Посмотреть подробнее</a>
+                    </div>
+                </div>
+                <div class="slider slider_two">
+                    <div class="slider_content">
+                        <h2>2 ЭТАП</h2>
+                        <p>Зарегистрируйся на нашем сайте, чтобы сразу получить награду, и продолжать получать ее после
+                            каждого заказа или же продолжай как гость.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="display: none">
+                <div class="slid_numb">
+                    <img src="img/s3.png" alt="">
+                    <div class="gayd__element">
+                        <a href="">Посмотреть подробнее</a>
+                    </div>
+                </div>
+                <div class="slider slider_three">
+                    <div class="slider_content">
+                        <h2>3 ЭТАП</h2>
+                        <p>После настройки параметров заказа в калькуляторе, и их подверждения, в открывшемся окне,
+                            необходимо ввести логин и пароль к твоей учетной записи в игре. За необходимостью заполнить
+                            поле комментарий (где ты можешь написать свои пожелания и все, что могло бы волновать в
+                            процессе выполнения заказа) и нажать кнопку “Купить” чтобы перейти к оплате.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="display: none">
+                <div class="slid_numb">
+                    <img src="img/s4.png" alt="">
+                    <div class="gayd__element">
+                        <a href="">Посмотреть подробнее</a>
+                    </div>
+                </div>
+                <div class="slider slider_four">
+                    <div class="slider_content">
+                        <h2>4 ЭТАП</h2>
+                        <p>Оплати свой заказ картой или же любым возможным способом с помощью наших операторов на сайте
+                            или в дискорде.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="display: none">
+                <div class="slid_numb">
+                    <img src="img/s5.png" alt="">
+                    <div class="gayd__element">
+                        <a href="">Посмотреть подробнее</a>
+                    </div>
+                </div>
+                <div class="slider slider_five">
+                    <div class="slider_content">
+                        <h2>5 ЭТАП</h2>
+                        <p>После оплаты, за заказом закрепляется персональный менеджер, который с радостью ответит на
+                            все твои вопросы и решит любую проблему или пожелание. Тебе будет подобран бустер
+                            исключительно по твоим запросам для 100% результата.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="display: none">
+                <div class="slid_numb">
+                    <img src="img/s6.png" alt="">
+                    <div class="gayd__element">
+                        <a href="">Посмотреть подробнее</a>
+                    </div>
+                </div>
+                <div class="slider slider_six ">
+                    <div class="slider_content">
+                        <h2>6 ЭТАП</h2>
+                        <p>Получай награды за каждый заказ и действия на сайте, обменивай их на темные монеты и покупай
+                            услуги на нашем сайте совершенно бесплатно или с огромной скидкой!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="str">
+                <a class="prev" onclick="minusSlide()"><img src="img/arrow-left.png" alt=""></a>
+                <a class="next" onclick="plusSlide()"><img src="img/arrow-right.png" alt=""></a>
+            </div>
+        </div>
+    </section>
+    <section class="seven">
+        <div class="catalog">
+            <div class="container">
+                <h1>Какие игры мы бустим?</h1>
+                <div class="catalog-content">
+                    <div class="catalog-cart catalog-cart_one">
+                        <img src="img/valorant.png" alt="" class="cart-logo">
+                        <h2>Valorant</h2>
+                    </div>
+                    <div class="catalog-cart catalog-cart_two">
+                        <img src="img/wow.png" alt="" class="cart-logo">
+                        <h2>WOW Classic</h2>
+                    </div>
+                    <div class="catalog-cart catalog-cart_three">
+                        <img src="img/heart.png" alt="" class="cart-logo">
+                        <h2>Hearthstone</h2>
+                    </div>
+                    <div class="catalog-cart catalog-cart_four">
+                        <img src="img/leg.png" alt="" class="cart-logo">
+                        <h2>League of Legends</h2>
+                    </div>
+                    <div class="catalog-cart catalog-cart_five">
+                        <img src="img/dota.png" alt="" class="cart-logo">
+                        <h2>Dota 2</h2>
+                    </div>
+                    <div class="catalog-cart catalog-cart_six">
+                        <img src="img/over.png" alt="" class="cart-logo">
+                        <h2>Overwatch</h2>
+                    </div>
+                    <div class="catalog-cart catalog-cart_seven">
+                        <img src="img/cs.png" alt="" class="cart-logo">
+                        <h2>CS:GO</h2>
+                    </div>
+                    <div class="catalog-cart catalog-cart_eight">
+                        <img src="img/bfa.png" alt="" class="cart-logo">
+                        <h2>WOW BFA</h2>
+                    </div>
+                </div>
+                <button class="button-ortr"><a href="#">ПОСМОТРЕТЬ КАТАЛОГ</a></button>
+            </div>
+        </div>
+    </section>
+    <section class="eight">
+        <div class="container">
+            <div class="say">
+                <div class="say_left">
+                    <div class="numbers">
+                        <div class="say__img">
+                            <img src="img/information (2).png" alt="">
+                        </div>
+                        <h1 class="say__text">12 765</h1>
+                        <h3 class="say__texth3">дней мы бустим</h3>
+
+                        <div class="say__img">
+                            <img src="img/information (2).png" alt="">
+                        </div>
+                        <h1 class="say__text">85 865</h1>
+                        <h3 class="say__texth3">темных монет, заработанных нашими клиентами</h3>
+
+                        <div class="say__img">
+                            <img src="img/information (2).png" alt="">
+                        </div>
+                        <h1 class="say__text">49 675</h1>
+                        <h3 class="say__texth3">EX полученного опыта нашими клиентами</h3>
+                    </div>
+                </div>
+                <div class="say__right">
+                    <div class="say__client">
+                        <h1>Что клиенты говорят о нас</h1>
+                        <p>Также читай отзывы на <b><u>форумах</u></b> и <b><u> сервисе отзывов</u></b></p>
+                        <div class="list">
+                            <div class="say__card">
+                                <div class="say__content">
+                                    <div class="say__line">
+                                        <p>Dragon Fire</p>
+                                        <div class="">
+                                            <img src="img/l1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <p class="say__description">Fast and effective boosting. I think that it is the
+                                        best project of boost accounts. I recommend it to anyone.</p>
+                                    <p class="date">22/05/2019</p>
+                                </div>
+                            </div>
+                            <div class="say__card">
+                                <div class="say__content">
+                                    <div class="say__line">
+                                        <p>Rost</p>
+                                        <div>
+                                            <img src="img/o1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <p class="say__description">I can’t believe how much crap the players give this
+                                        guy such a great guy very fast process and very nice will recommend</p>
+                                    <p class="date">22/05/2019</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list2">
+                            <div class="say__card">
+                                <div class="say__content">
+                                    <div class="say__line">
+                                        <p>Dragon Fire</p>
+                                        <div class="">
+                                            <img src="img/w1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <p class="say__description">Fast and effective boosting. I think that it is the
+                                        best project of boost accounts. I recommend it to anyone.</p>
+                                    <p class="date">22/05/2019</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="say__element">
+                        <hr>
+                        <p class="gayd-text">4 <span>/ 16</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="nine">
+        <div class="container">
+            <div class="gayd">
+                <h1>Гайды и лайфхаки</h1>
+                <div class="bl">
+                    <div class="scroll3">
+                        <div class="scroll3-content">
+                            <div class="scroll3-content scroll3-content_one"></div>
+                            <h3 class="gayd__activete">КТО ЯВЛЯЮТСЯ ЛУЧШИМИ ИГРОКАМИ ТОП-ЛЕЙБЛА LEAGUE
+                                OF LEGENDS?</h3>
+                            <p class="gayd__activete">Этап розыгрыша чемпионата мира по League of Legend
+                                начнется 1 октября
+                                в Сеуле. Этот этап состоит из 12 команд ...</p>
+                            <div class="gayd__button">
+                                <div class="gayd__border">
+                                    <a class="gayd__button-link">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scroll3-content">
+                            <div class="scroll3-content scroll3-content_two"></div>
+                            <h3 class="gayd__activete">ВЕДЬМИН ЛЕС — ВСЕ КАРТЫ, ДАТА ВЫХОДА И ПОДРОБНЫЙ ГАЙД
+                            </h3>
+                            <p class="gayd__activete">Разработчики объявили о выходе первого дополнения в году
+                                Ворона и показали шесть новых карт. Предза...</p>
+                            <div class="gayd__button">
+                                <div class="gayd__border">
+                                    <a class="gayd__button-link">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scroll3-content">
+                            <div class="scroll3-content scroll3-content_three"></div>
+                            <h3 class="gayd__activete">КАК НЕ БЫТЬ «ВАГОНОМ» В OVERWATCH?</h3>
+                            </h3>
+                            <p class="gayd__activete">Что делать, если реакции мангуста и крутого аима у вас
+                                нет, а побеждать в онлайн-играх очень хочется? Возможно, без «самых быстрых
+                                рук... </p>
+                            <div class="gayd__button">
+                                <div class="gayd__border">
+                                    <a class="gayd__button-link">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scroll3-content">
+                            <div class="scroll3-content scroll3-content_four"></div>
+                            <h3 class="gayd__activete">ГАЙД ПО ЧЕМПИОНАМ, КАКИЕ БОЛЬШЕ ПОДОЙДУТ ДЛЯ НАЧИНАЮЩЕГО
+                                ИГРОКА</h3>
+                            <p class="gayd__activete">Этап розыгрыша чемпионата мира по League of Legend
+                                начнется 1 октября
+                                в Сеуле. Этот этап состоит из 12 команд ...</p>
+                            <div class="gayd__button">
+                                <div class="gayd__border">
+                                    <a class="gayd__button-link">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scroll3-content">
+                            <div class="scroll3-content scroll3-content_one"></div>
+                            <h3 class="gayd__activete">КТО ЯВЛЯЮТСЯ ЛУЧШИМИ ИГРОКАМИ ТОП-ЛЕЙБЛА LEAGUE
+                                OF LEGENDS?</h3>
+                            <p class="gayd__activete">Стоит упомянуть, что в игре присутствует небольшой режим
+                                прокачки чемпионов. Всего 4 уровня...</p>
+                            <div class="gayd__button">
+                                <div class="gayd__border">
+                                    <a class="gayd__button-link">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="scroll3-content">
+                            <div class="scroll3-content scroll3-content_two"></div>
+                            <h3 class="gayd__activete">ВЕДЬМИН ЛЕС — ВСЕ КАРТЫ, ДАТА ВЫХОДА И ПОДРОБНЫЙ ГАЙД
+                            </h3>
+                            <p class="gayd__activete">Разработчики объявили о выходе первого дополнения в году
+                                Ворона и показали шесть новых карт. Предза...</p>
+                            <div class="gayd__button">
+                                <div class="gayd__border">
+                                    <a class="gayd__button-link">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ff">
+                        <div class="scroll3-content">
+                            <div class="scroll3-content scroll3-content_four"></div>
+                            <h3 class="gayd__activete">ГАЙД ПО ЧЕМПИОНАМ, КАКИЕ БОЛЬШЕ ПОДОЙДУТ ДЛЯ НАЧИНАЮЩЕГО
+                                ИГРОКА</h3>
+                            <p class="gayd__activete">Этап розыгрыша чемпионата мира по League of Legend
+                                начнется 1 октября
+                                в Сеуле. Этот этап состоит из 12 команд ...</p>
+                            <div class="gayd__button">
+                                <div class="gayd__border">
+                                    <a class="gayd__button-link">Подробнее</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gayd__element">
+                            <p class="gayd-text">4 <span>/ 16</span></p>
+                            <a href="">Посмотреть все гайды</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="ten">
+        <div class="container">
+            <div class="pleasure">
+                <h1>Играй в свое удовольствие <br>с помощью Darkboosting.com</h1>
+                <p>Мы бустим быстро, качественно и профессионально</p>
+                <button class="button-tr"><a href="#">Заказать буст</a></button>
+            </div>
+        </div>
+    </section>
+    <section class="eleven">
+        <div class="container">
+            <div class="scroll">
+                <div class="scroll1 scroll4">
+                    <div class="content">
+                        <h1>НЕМНОГО БОЛЬШЕ О НАС</h1>
+                        <p>darkboosting.com предоставляет профессиональные услуги по прокачке в онлайн играх. Мы
+                            предлагаем свои услуги тем, кто не хочет напрасно расходовать свое время и нервы,
+                            самостоятельно прокачивая персонажа, развивать навыки и тратить месяцы своей жизни на
+                            получение эпических достижений. Обеспечиваем быстрый и абсолютно безопасный результат.</p>
+                        <p>Игры увлекают и требуют много времени. Но не все игроки готовы отдавать десятки часов в
+                            неделю, для того чтобы иметь возможность опробовать высокоуровневую лигу или пробиться к
+                            вершинам рейтингов. Семья или ответственная работа могут ограничивать время, которое вы
+                            можете провести в игре, поэтому вам потребуется наша помощь, если вы хотите опробовать все
+                            возможности игры, сражаться с самыми серьезными противниками, а не топтаться месяцами внизу
+                            рейтинга или играть в низкоуровневой лиге. Наш сервис прокачки аккаунтов будет полезен тем,
+                            кто не обладает большим количеством свободного времени, но хочет опробовать все возможности
+                            своей игры.</p>
+                        <p>darkboosting.com предоставляет профессиональные услуги по прокачке в онлайн играх. Мы
+                            предлагаем свои услуги тем, кто не хочет напрасно расходовать свое время и нервы,
+                            самостоятельно прокачивая персонажа, развивать навыки и тратить месяцы своей жизни на
+                            получение эпических достижений. Обеспечиваем быстрый и абсолютно безопасный результат.</p>
+                        <p>Игры увлекают и требуют много времени. Но не все игроки готовы отдавать десятки часов в
+                            неделю, для того чтобы иметь возможность опробовать высокоуровневую лигу или пробиться к
+                            вершинам рейтингов. Семья или ответственная работа могут ограничивать время, которое вы
+                            можете провести в игре, поэтому вам потребуется наша помощь, если вы хотите опробовать все
+                            возможности игры, сражаться с самыми серьезными противниками, а не топтаться месяцами внизу
+                            рейтинга или играть в низкоуровневой лиге. Наш сервис прокачки аккаунтов будет полезен тем,
+                            кто не обладает большим количеством свободного времени, но хочет опробовать все возможности
+                            своей игры.</p>
+                        <p>darkboosting.com предоставляет профессиональные услуги по прокачке в онлайн играх. Мы
+                            предлагаем свои услуги тем, кто не хочет напрасно расходовать свое время и нервы,
+                            самостоятельно прокачивая персонажа, развивать навыки и тратить месяцы своей жизни на
+                            получение эпических достижений. Обеспечиваем быстрый и абсолютно безопасный результат.</p>
+                        <p>Игры увлекают и требуют много времени. Но не все игроки готовы отдавать десятки часов в
+                            неделю, для того чтобы иметь возможность опробовать высокоуровневую лигу или пробиться к
+                            вершинам рейтингов. Семья или ответственная работа могут ограничивать время, которое вы
+                            можете провести в игре, поэтому вам потребуется наша помощь, если вы хотите опробовать все
+                            возможности игры, сражаться с самыми серьезными противниками, а не топтаться месяцами внизу
+                            рейтинга или играть в низкоуровневой лиге. Наш сервис прокачки аккаунтов будет полезен тем,
+                            кто не обладает большим количеством свободного времени, но хочет опробовать все возможности
+                            своей игры.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="f23">
+                <img class="logof" src="img/logo-dark-boosting-2.png" alt="">
+                <div>
+                    <h2>О компании</h2>
+                    <p>Как это работает?</p>
+                    <p>О нас</p>
+                    <p>Отзывы</p>
+                    <p>Контакты</p>
+                </div>
+                <div>
+                    <h2>Помощь</h2>
+                    <a href=""></a>
+                    <p>Гайды и лайфхаки</p>
+                    <p>FAQ</p>
+                    <p>Конфиденциальность</p>
+                    <p>Правила и условия</p>
+                    <p>Пользовательское соглашение</p>
+                </div>
+                <div class="social">
+                    <h2>Соцсети</h2>
+                    <div>
+                        <a href=""><img src="img/discord.png" alt=""></a>
+                        <a href=""><img src="img/facebook.png" alt=""></a>
+                        <a href=""><img src="img/instagram.png" alt=""></a>
+
+                    </div>
+                    <div>
+                        <a href=""><img src="img/paypal-logo.png" alt=""></a>
+                        <a href=""><img src="img/mastercard-logo.png" alt=""></a>
+                        <a href=""><img src="img/visa-logo.png" alt=""></a>
+                        <a href=""><img src="img/liqpay-logo.png" alt=""></a>
+                        <a href=""><img src="img/qiwi-logo.png" alt=""></a>
+                        <a href=""><img src="img/privat24-logo.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div>
+                <p>© 2016-2020 - darkboosting.com</p>
+                <img src="img/xx101.png" alt="">
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
